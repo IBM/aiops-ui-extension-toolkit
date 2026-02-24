@@ -184,7 +184,7 @@ A simple example (using one of the provided examples from the repo) would be:
 ```
 
 ## Customizing the styling of a panel and/or region
-Style can be provided to the overall route, but also to individual regions if using. The following example shows an example composed of a bottom and top region. The top region will take up 30% of the viewport height, and the bottom panel will automatically take up the remaining 70%. However, the entire panel is additionally styled with 20px padding:
+CSS Styling can be provided to the overall route, but also to individual regions if using. The following example shows an example composed of a bottom and top region. The top region will take up 30% of the viewport height, and the bottom panel will automatically take up the remaining 70%. However, the entire panel is additionally styled with 20px padding:
 ```json
 {
   "path": "/styled-route",

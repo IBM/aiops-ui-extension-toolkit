@@ -1,0 +1,176 @@
+/**
+ * © Copyright IBM Corp. 2025
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.clean-console {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    background-color: #525252;
+    padding: 1rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    gap: 1rem;
+    background-color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    flex: 1;
+  }
+
+  &__main {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__status-tabs {
+    display: grid;
+    grid-template-columns: 200px repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  &__status-tab {
+    background-color: #525252;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+
+    &--blank {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  &__grid {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__table-row {
+    display: grid;
+    grid-template-columns: 200px repeat(5, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+
+  &__table-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+
+    &--service {
+      background-color: #8d8d8d;
+      color: #ffffff;
+      border-radius: 4px;
+      font-weight: 500;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    &--status {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__status-indicator {
+    width: 60px;
+    height: 32px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__status-count {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  &__legend {
+    background-color: #525252;
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 150px;
+    max-width: 200px;
+  }
+
+  &__legend-title {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    text-align: center;
+  }
+
+  &__legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+  }
+
+  &__legend-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}

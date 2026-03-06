@@ -2,7 +2,7 @@
  * © Copyright IBM Corp. 2025
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ConditionSet } from './utils/filterUtils';
+import { ConditionSet } from '../utils/filterUtils';
 
 interface QueryResponse {
   data: {
@@ -53,7 +53,11 @@ interface MonitorBoxInterface {
   monitorBoxData?: object,
   monitorBoxOptions?: object,
   onBoxClick: () => void,
-  shouldRefetch: boolean
+  shouldRefetch: boolean,
+  // Optional pre-fetched data to avoid redundant queries
+  data?: any,
+  loading?: boolean,
+  error?: any
 }
 
 export type {

@@ -4,6 +4,6 @@
  */
 
 import createPanel from '../app/createPanel';
-import MonitorBoxCollection from '../components/monitor-box/MonitorBoxCollection';
+import MonitorBoxCollection from '../components/monitor-box-collection/MonitorBoxCollection';
 
 export default createPanel(MonitorBoxCollection);

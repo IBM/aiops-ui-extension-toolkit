@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useState, useCallback, useRef } from 'react';
-import type { AlertSummary } from '../components/shared/MonitorBoxTypes';
+import type { AlertSummary } from '../components/shared/monitor-box/MonitorBoxTypes';
 
 interface AlertSummaryData {
   tenant: {

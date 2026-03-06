@@ -11,13 +11,13 @@ import { ActionableNotification, Loading, MultiSelect} from '@carbon/react';
 import getReactRenderer from '@ibm/akora-renderer-react';
 import '@carbon/charts-react/styles.css'
 
-import MonitorBox from '../shared/MonitorBox';
+import MonitorBox from '../shared/monitor-box/MonitorBox';
 import { useQuery } from '#src/helpers/useQuery';
 import { useAlertSummaries } from '#src/helpers/useAlertSummaries';
 import { conditionSetToAPIQuery } from '../shared/utils/filterUtils';
-import type { AlertFilter, AlertFilterParsed, QueryResponse } from '../shared/MonitorBoxTypes';
+import type { AlertFilter, AlertFilterParsed, QueryResponse } from '../shared/monitor-box/MonitorBoxTypes';
 
-import './monitor-boxes.scss';
+import './monitor-box-collection.scss';
 
 const ReactRenderer = getReactRenderer(React, ReactDOM);
 const { useAkoraState, setUrlParameters } = ReactRenderer.components;

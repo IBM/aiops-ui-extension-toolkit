@@ -5,7 +5,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useQuery } from '#src/helpers/useQuery.mock';
 import MonitorBoxCollection from './MonitorBoxCollection';
-import type { QueryResponse } from './MonitorBoxTypes';
+import type { QueryResponse } from '../shared/monitor-box/MonitorBoxTypes';
 
 const meta: Meta<typeof MonitorBoxCollection> = {
   component: MonitorBoxCollection,

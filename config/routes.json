@@ -1,124 +1,129 @@
 {
-    "spec": {
-        "menuRoutes": [
-            {
-                "categoryTitle": "Example dashboards",
-                "routes": [
-                    "/alerts-top-10",
-                    "/alerts-workflow",
-                    "/alerts-timeline",
-                    "/incidents-distribution",
-                    "/incidents-top-10",
-                    "/application-heatmap",
-                    "/monitor-boxes",
-                    "/alert-viewer-filter"
-                ],
-                "type": "category"
-            }
-        ],
+  "spec": {
+    "menuRoutes": [
+      {
+        "categoryTitle": "Example dashboards",
         "routes": [
-            {
-                "path": "/alerts-workflow",
-                "regions": {
-                    "left": {
-                        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
-                        "panelId": "alerts-workflow"
-                    },
-                    "right": {
-                        "aiopsPanel": "alertViewer"
-                    }
-                },
-                "title": "Alerts workflow"
-            },
-            {
-                "path": "/alerts-timeline",
-                "regions": {
-                    "bottom": {
-                        "aiopsPanel": "alertViewer"
-                    },
-                    "top": {
-                        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
-                        "panelId": "alerts-timeline"
-                    }
-                },
-                "style": {
-                    "height": "45vw"
-                },
-                "title": "Alerts timeline"
-            },
-            {
-                "path": "/alerts-top-10",
-                "regions": {
-                    "right": {
-                        "aiopsPanel": "alertViewer"
-                    },
-                    "left": {
-                        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
-                        "panelId": "top-n"
-                    }
-                },
-                "title": "Alerts top 10"
-            },
-            {
-                "path": "/incidents-distribution",
-                "regions": {
-                    "right": {
-                        "aiopsPanel": "incidentViewer"
-                    },
-                    "left": {
-                        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
-                        "panelId": "incidents-pie-chart"
-                    }
-                },
-                "title": "Incidents distribution"
-            },
-            {
-                "path": "/incidents-top-10",
-                "regions": {
-                    "right": {
-                        "aiopsPanel": "incidentViewer"
-                    },
-                    "left": {
-                        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
-                        "panelId": "top-n-incidents"
-                    }
-                },
-                "title": "Incidents top 10"
-            },
-            {
-                "path": "/application-heatmap",
-                "regions": {
-                    "top": {
-                        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
-                        "panelId": "application-heatmap"
-                    },
-                    "bottom": {
-                        "aiopsPanel": "alertViewer"
-                    }
-                },
-                "title": "Application heatmap"
-            },
-            {
-                "path": "/monitor-boxes",
-                "regions": {
-                    "right": {
-                        "aiopsPanel": "alertViewer"
-                    },
-                    "left": {
-                        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
-                        "panelId": "monitor-boxes"
-                    }
-                },
-                "title": "Monitor boxes"
-            },
-            {
-                "path": "/alert-viewer-filter",
-                "aiopsPanel": "alertViewer",
-                "state": {
-                    "filtername": "Critical"
-                },
-                "title": "Alert viewer with Filter"
+          "/alerts-top-10",
+          "/alerts-workflow",
+          "/alerts-timeline",
+          "/incidents-distribution",
+          "/incidents-top-10",
+          "/application-heatmap",
+          "/monitor-boxes",
+          "/alert-viewer-filter"
+        ],
+        "type": "category"
+      }
+    ],
+    "routes": [
+      {
+        "path": "/alerts-workflow",
+        "regions": {
+          "left": {
+            "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+            "panelId": "alerts-workflow"
+          },
+          "right": {
+            "aiopsPanel": "alertViewer"
+          }
+        },
+        "title": "Alerts workflow"
+      },
+      {
+        "path": "/alerts-timeline",
+        "regions": {
+          "bottom": {
+            "aiopsPanel": "alertViewer"
+          },
+          "top": {
+            "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+            "panelId": "alerts-timeline"
+          }
+        },
+        "style": {
+          "height": "45vw"
+        },
+        "title": "Alerts timeline"
+      },
+      {
+        "path": "/alerts-top-10",
+        "regions": {
+          "right": {
+            "aiopsPanel": "alertViewer"
+          },
+          "left": {
+            "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+            "panelId": "top-n"
+          }
+        },
+        "title": "Alerts top 10"
+      },
+      {
+        "path": "/incidents-distribution",
+        "regions": {
+          "right": {
+            "aiopsPanel": "incidentViewer"
+          },
+          "left": {
+            "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+            "panelId": "incidents-pie-chart"
+          }
+        },
+        "title": "Incidents distribution"
+      },
+      {
+        "path": "/incidents-top-10",
+        "regions": {
+          "right": {
+            "aiopsPanel": "incidentViewer"
+          },
+          "left": {
+            "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+            "panelId": "top-n-incidents"
+          }
+        },
+        "title": "Incidents top 10"
+      },
+      {
+        "path": "/application-heatmap",
+        "regions": {
+          "top": {
+            "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+            "panelId": "application-heatmap"
+          },
+          "bottom": {
+            "aiopsPanel": "alertViewer"
+          }
+        },
+        "title": "Application heatmap"
+      },
+      {
+        "path": "/monitor-boxes",
+        "regions": {
+          "right": {
+            "aiopsPanel": "alertViewer"
+          },
+          "left": {
+            "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+            "panelId": "monitor-boxes",
+            "state": {
+              "useAllFilters": true,
+              "openNewAlertListOnClick": false
             }
-        ]
-    }
+          }
+        },
+        "title": "Monitor boxes"
+      },
+      {
+        "path": "/alert-viewer-filter",
+        "aiopsPanel": "alertViewer",
+        "state": {
+          "filtername": "Critical"
+        },
+        "title": "Alert viewer with Filter"
+      }
+    ],
+    "frameSrcUrls": ""
+  }
 }

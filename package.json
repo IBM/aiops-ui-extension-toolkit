@@ -92,11 +92,11 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@carbon/charts-react": "^1.23.10",
-    "@carbon/colors": "^11.33.0",
-    "@carbon/icons-react": "^11.60.0",
-    "@carbon/react": "^1.83.0",
-    "@carbon/styles": "^1.82.0",
+    "@carbon/charts-react": "^1.7.6",
+    "@carbon/colors": "^11.22.0",
+    "@carbon/icons-react": "^11.42.0",
+    "@carbon/react": "^1.74.0",
+    "@carbon/styles": "^1.73.0",
     "@ibm/akora-renderer-react": "^1.0.4",
     "@kubernetes/client-node": "^1.2.0",
     "@storybook/test": "^8.6.9",
@@ -111,20 +111,27 @@
   ],
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "peerDependencies": {
-    "react": "^=17",
-    "react-dom": "^=17"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "overrides": {
     "git-url-parse": "^13.1.1",
     "micromatch": "^4.0.7",
     "postcss": "^8.4.31",
-    "@floating-ui/react": "0.26.28"
+    "@floating-ui/react": "0.26.28",
+    "@carbon/react": {
+      "react-is": "18.3.1"
+    }
   },
   "imports": {
     "#src/helpers/useQuery": {
       "storybook": "./src/helpers/useQuery.mock.ts",
       "default": "./src/helpers/useQuery.ts"
     },
-    "#*": ["./*", "./*.ts", "./*.tsx"]
+    "#*": [
+      "./*",
+      "./*.ts",
+      "./*.tsx"
+    ]
   }
 }

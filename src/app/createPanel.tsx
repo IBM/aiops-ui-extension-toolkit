@@ -11,9 +11,11 @@ export type PanelProps = {
   akoraOriginUrl?: string,
   asmProxyEndpoint?: string,
   app?: unknown,
-  locale?: string
+  locale?: string,
+  [key: string]: any // Allow any additional props
 };
 
-const createPanel = (Component: React.FC) => (props: PanelProps) : JSX.Element => <Component/>;
+const createPanel = <P extends object>(Component: React.ComponentType<P>) =>
+  (props: PanelProps & P): JSX.Element => <Component {...props as P} />;
 
 export default createPanel;

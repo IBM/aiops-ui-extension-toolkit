@@ -61,7 +61,10 @@ export const IncidentsPieChart = {
 export const MonitorBoxes = {
   renderer: ReactRenderer,
   state: {
-    component: () => import('./panels/monitor-boxes.panel')
+    component: () => import('./panels/monitor-boxes.panel'),
+    stateToPropMapper: (state) => (
+      {...state}
+    )
   }
 };
 

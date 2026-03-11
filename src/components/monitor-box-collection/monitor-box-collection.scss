@@ -1,0 +1,100 @@
+/**
+ * © Copyright IBM Corp. 2025
+ * SPDX-License-Identifier: Apache-2.0
+ */
+@use '@carbon/react/scss/colors';
+
+.hdm--custom-layout-container {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+.monitor-boxes {
+  background-color: colors.$gray-10;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 8px 8px;
+  width: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+
+  &__section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 16px 12px 8px 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #393939;
+  }
+
+  &__empty-section {
+    margin-top: 24px;
+  }
+
+  &__dropdown {
+    margin: 12px;
+  }
+
+  &__collection {
+    column-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 280px;
+    margin: 12px;
+    row-gap: 16px;
+  }
+}
+
+.monitor-box {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: grey;
+    border-color: blue;
+    cursor: pointer;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  &__summary {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 4px 12px;
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      &_right {
+        display: flex;
+        justify-content: center;
+        width: 40px;
+      }
+    }
+
+    &-icon-holder {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &__chart {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

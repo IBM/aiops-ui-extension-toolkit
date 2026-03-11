@@ -1,33 +1,12 @@
 /**
- * © Copyright IBM Corp. 2025
+ * © Copyright IBM Corp. 2026
  * SPDX-License-Identifier: Apache-2.0
  */
-@use '@carbon/react/scss/colors';
-
-.hdm--custom-layout-container {
-  grid-template-columns: 1fr 1fr !important;
-}
-
-.monitor-boxes {
-  background-color: colors.$gray-10;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 16px;
-  width: 100%;
-
-  &__collection {
-    column-gap: 30px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 350px);
-    margin: 30px;
-    row-gap: 30px;
-  }
-}
 
 .monitor-box {
-  border: 1px solid black;
+  background-color: #262626; // g90 background
+  border: 1px solid #393939; // g90 border color
+  color: #f4f4f4; // g90 text color
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -37,21 +16,21 @@
   width: 100%;
 
   &:hover {
-    background-color: grey;
-    border-color: blue;
+    background-color: #393939; // g90 hover background
+    border-color: #0f62fe; // Carbon blue for hover
     cursor: pointer;
   }
 
   &__heading {
     display: flex;
     flex-direction: row;
-    font-weight: bold;
     justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 8px;
   }
 
   &__summary {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
     padding: 4px 12px;
 
     &-row {
@@ -77,4 +56,14 @@
     padding-left: 4px;
     padding-right: 4px;
   }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+  }
 }
+
+// Made with Bob

@@ -7,9 +7,10 @@ import React, { ReactNode, useEffect, useMemo, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { SimpleBarChart, ScaleTypes, type BarChartOptions, type ChartTabularData } from '@carbon/charts-react';
 import { useQuery } from '#src/helpers/useQuery';
-import type { AlertSummary, QueryResponse, MonitorBoxInterface } from './MonitorBoxTypes.js';
+import type { AlertSummary, QueryResponse, MonitorBoxInterface } from './MonitorBoxTypes';
 
 import '@carbon/charts-react/styles.css'
+import './monitor-box.scss';
 
 // @ts-ignore
 import getReactRenderer from '@ibm/akora-renderer-react';
@@ -26,6 +27,7 @@ declare global {
 }
 
 const defaultOptions: BarChartOptions = {
+  theme: 'g90', // Dark theme for Carbon Charts
   axes: {
     left: {
       mapsTo: 'value'
@@ -47,7 +49,7 @@ const defaultOptions: BarChartOptions = {
       enabled: false
     }
   },
-  height: '200px',
+  height: '160px',
   legend: {
     enabled: false,
   },
@@ -127,53 +129,35 @@ export default function MonitorBox (props: MonitorBoxInterface) {
     title,
     filterClause,
     onBoxClick,
-    shouldRefetch
+    shouldRefetch,
+    data,
+    loading,
+    error
   } = props;
   const monitorBoxId = `monitor-box_${title}`;
   const [monitorBoxData, setMonitorBoxData] = useState();
   const [monitorBoxOptions, setMonitorBoxOptions] = useState(defaultOptions);
-  const queryName = useMemo(() => 'getAlertSummary', []);
-  const queryOptions = useMemo(() => ({
-    tenantId: 'cfd95b7e-3bc7-4006-a4a8-a73a79c71255',
-    filter: filterClause,
-    groupBy: ['severity']
-  }), [filterClause]);
 
   const { state: akoraState } = useAkoraState();
 
-  const {
-    data,
-    loading,
-    error,
-    refetch
-  }: QueryResponse = useQuery(queryName, queryOptions);
-
   // Process data for summaries here
   const summaries = useMemo(() => {
-    if (!data) {
-      return null;
-    }
     return {
       total: {
         title: 'Total',
-        value: data && 'alertSummary' in data.tenant ? data.tenant.alertSummary.summary.reduce((acc: number, cur: AlertSummary) => acc + cur.count, 0) : null
+        value: data ? data?.tenant?.alertSummary.summary.reduce((acc: number, cur: AlertSummary) => acc + cur.count, 0) : null
       },
       highest: {
         title: 'Highest',
-        value: data && 'alertSummary' in data.tenant ? getHighest(data.tenant.alertSummary.summary) : null
+        value: data ? getHighest(data.tenant.alertSummary.summary) : null
       },
       lowest: {
         title: 'Lowest',
-        value: data && 'alertSummary' in data.tenant ? getLowest(data.tenant.alertSummary.summary) : null
+        value: data ? getLowest(data.tenant.alertSummary.summary) : null
       }
     };
   }, [data]);
 
-  useEffect(() => {
-    if(shouldRefetch) {
-      refetch();
-    }
-  }, [shouldRefetch]);
 
   useEffect(() => {
     setMonitorBoxOptions({
@@ -212,8 +196,8 @@ export default function MonitorBox (props: MonitorBoxInterface) {
   }
 
   const getSummaryRows = () => {
-    const HighestSevIcon = akoraState.utils.getSeverityIcon(summaries.highest.value);
-    const LowestSevIcon = akoraState.utils.getSeverityIcon(summaries.lowest.value);
+    const HighestSevIcon = summaries.highest.value ? akoraState.utils.getSeverityIcon(summaries.highest.value) : null;
+    const LowestSevIcon = summaries.lowest.value ? akoraState.utils.getSeverityIcon(summaries.lowest.value) : null;
 
     return (
       <>
@@ -223,20 +207,27 @@ export default function MonitorBox (props: MonitorBoxInterface) {
         )}
         {getSummaryRow(
           summaries.highest.title,
-          <div className={`${className}__summary-icon-holder`}><HighestSevIcon/></div>
+          summaries.highest.value ?
+            <div className={`${className}__summary-icon-holder`}><HighestSevIcon/></div> :
+            <div>-</div>
         )}
         {getSummaryRow(
           summaries.lowest.title,
-          <div className={`${className}__summary-icon-holder`}><LowestSevIcon/></div>
+          summaries.lowest.value ?
+            <div className={`${className}__summary-icon-holder`}><LowestSevIcon/></div> :
+            <div>-</div>
         )}
       </>
     )
   };
 
+  // Check if there are no alerts
+  const hasNoAlerts = summaries && summaries.total.value === 0;
+
   return (
     <div
       id={monitorBoxId}
-      className={className}
+      className={`${className} ${hasNoAlerts ? `${className}--empty` : ''}`}
       role='contentinfo'
       onClick={() => onBoxClick()}
     >
@@ -253,13 +244,10 @@ export default function MonitorBox (props: MonitorBoxInterface) {
               {summaries && getSummaryRows()}
             </div>
             <div className={`${className}__chart`}>
-              {
-                monitorBoxData &&
-                <SimpleBarChart
-                  data={monitorBoxData}
-                  options={monitorBoxOptions}
-                />
-              }
+              <SimpleBarChart
+                data={monitorBoxData || initialData}
+                options={monitorBoxOptions}
+              />
             </div>
           </>
       }

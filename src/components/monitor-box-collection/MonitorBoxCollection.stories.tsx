@@ -9,6 +9,24 @@ import type { QueryResponse } from '../shared/monitor-box/MonitorBoxTypes';
 
 const meta: Meta<typeof MonitorBoxCollection> = {
   component: MonitorBoxCollection,
+  argTypes: {
+    useAllFilters: {
+      control: 'boolean',
+      description: 'When true, displays all filters automatically. When false, shows a multi-select dropdown to choose filters.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    openNewAlertListOnClick: {
+      control: 'boolean',
+      description: 'When true, clicking a monitor box opens the alert list in a new window. When false, navigates in the current window.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+  },
 };
 export default meta;
 
@@ -83,6 +101,70 @@ const mockAlertSummaryResponse: QueryResponse = {
 }
 
 export const Default: Story = {
+  args: {
+    useAllFilters: false,
+    openNewAlertListOnClick: false,
+  },
+  async beforeEach() {
+    useQuery.mockImplementation(input => {
+      switch (input) {
+        case 'getFilters':
+          return mockAlertFilterResponse;
+        case 'getAlertSummary':
+          return mockAlertSummaryResponse;
+        default:
+          console.log('Invalid query name');
+          return null;
+      }
+    });
+  },
+};
+
+export const AllFiltersDisplayed: Story = {
+  args: {
+    useAllFilters: true,
+    openNewAlertListOnClick: false,
+  },
+  async beforeEach() {
+    useQuery.mockImplementation(input => {
+      switch (input) {
+        case 'getFilters':
+          return mockAlertFilterResponse;
+        case 'getAlertSummary':
+          return mockAlertSummaryResponse;
+        default:
+          console.log('Invalid query name');
+          return null;
+      }
+    });
+  },
+};
+
+export const OpenInNewWindow: Story = {
+  args: {
+    useAllFilters: false,
+    openNewAlertListOnClick: true,
+  },
+  async beforeEach() {
+    useQuery.mockImplementation(input => {
+      switch (input) {
+        case 'getFilters':
+          return mockAlertFilterResponse;
+        case 'getAlertSummary':
+          return mockAlertSummaryResponse;
+        default:
+          console.log('Invalid query name');
+          return null;
+      }
+    });
+  },
+};
+
+export const AllFiltersWithNewWindow: Story = {
+  args: {
+    useAllFilters: true,
+    openNewAlertListOnClick: true,
+  },
   async beforeEach() {
     useQuery.mockImplementation(input => {
       switch (input) {

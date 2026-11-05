@@ -28,12 +28,12 @@ exports[`StatusGroups should match sample snapshot 1`] = `
           >
             <button
               aria-activedescendant=""
-              aria-controls="downshift-:r2:-menu"
+              aria-controls="downshift-:r1:-menu"
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-labelledby="downshift-:r2:-label"
+              aria-labelledby="downshift-:r1:-label"
               class="cds--list-box__field"
-              id="downshift-:r2:-toggle-button"
+              id="downshift-:r1:-toggle-button"
               role="combobox"
               tabindex="0"
               title="All"
@@ -60,7 +60,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+                    d="M8 11 3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
                   />
                   <title>
                     Open menu
@@ -69,9 +69,9 @@ exports[`StatusGroups should match sample snapshot 1`] = `
               </div>
             </button>
             <ul
-              aria-labelledby="downshift-:r2:-label"
+              aria-labelledby="downshift-:r1:-label"
               class="cds--list-box__menu"
-              id="downshift-:r2:-menu"
+              id="downshift-:r1:-menu"
               role="listbox"
             />
           </div>
@@ -83,7 +83,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
             class="cds--accordion__item"
           >
             <button
-              aria-controls="accordion-item-:r3:"
+              aria-controls="accordion-item-:r2:"
               aria-expanded="false"
               class="cds--accordion__heading"
               type="button"
@@ -100,7 +100,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M11 8L6 13 5.3 12.3 9.6 8 5.3 3.7 6 3z"
+                  d="M11 8 6 13 5.3 12.3 9.6 8 5.3 3.7 6 3z"
                 />
               </svg>
               <div
@@ -126,7 +126,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r5:"
+                          aria-labelledby="tooltip-:r4:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 131, 137);"
                           type="button"
@@ -137,7 +137,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r5:"
+                        id="tooltip-:r4:"
                         role="tooltip"
                       >
                         <span
@@ -157,7 +157,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r9:"
+                          aria-labelledby="tooltip-:r8:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 183, 132);"
                           type="button"
@@ -168,7 +168,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r9:"
+                        id="tooltip-:r8:"
                         role="tooltip"
                       >
                         <span
@@ -188,7 +188,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:rd:"
+                          aria-labelledby="tooltip-:rc:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 131, 137);"
                           type="button"
@@ -199,7 +199,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:rd:"
+                        id="tooltip-:rc:"
                         role="tooltip"
                       >
                         <span
@@ -221,7 +221,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
             >
               <div
                 class="cds--accordion__content"
-                id="accordion-item-:r3:"
+                id="accordion-item-:r2:"
               >
                 <div
                   class="status-card"
@@ -242,7 +242,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:rh:"
+                          aria-labelledby="tooltip-:rg:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 131, 137);"
                           type="button"
@@ -253,7 +253,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:rh:"
+                        id="tooltip-:rg:"
                         role="tooltip"
                       >
                         <span
@@ -273,7 +273,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:rl:"
+                          aria-labelledby="tooltip-:rk:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(224, 224, 224);"
                           type="button"
@@ -284,7 +284,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:rl:"
+                        id="tooltip-:rk:"
                         role="tooltip"
                       >
                         <span
@@ -304,7 +304,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:rp:"
+                          aria-labelledby="tooltip-:ro:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 131, 137);"
                           type="button"
@@ -315,7 +315,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:rp:"
+                        id="tooltip-:ro:"
                         role="tooltip"
                       >
                         <span
@@ -349,7 +349,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:rt:"
+                          aria-labelledby="tooltip-:rs:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 183, 132);"
                           type="button"
@@ -360,7 +360,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:rt:"
+                        id="tooltip-:rs:"
                         role="tooltip"
                       >
                         <span
@@ -380,7 +380,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r11:"
+                          aria-labelledby="tooltip-:r10:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 183, 132);"
                           type="button"
@@ -391,7 +391,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r11:"
+                        id="tooltip-:r10:"
                         role="tooltip"
                       >
                         <span
@@ -411,7 +411,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r15:"
+                          aria-labelledby="tooltip-:r14:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(255, 183, 132);"
                           type="button"
@@ -422,7 +422,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r15:"
+                        id="tooltip-:r14:"
                         role="tooltip"
                       >
                         <span
@@ -456,7 +456,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r19:"
+                          aria-labelledby="tooltip-:r18:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(253, 220, 105);"
                           type="button"
@@ -467,7 +467,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r19:"
+                        id="tooltip-:r18:"
                         role="tooltip"
                       >
                         <span
@@ -487,7 +487,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r1d:"
+                          aria-labelledby="tooltip-:r1c:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(224, 224, 224);"
                           type="button"
@@ -498,7 +498,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r1d:"
+                        id="tooltip-:r1c:"
                         role="tooltip"
                       >
                         <span
@@ -518,7 +518,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r1h:"
+                          aria-labelledby="tooltip-:r1g:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(253, 220, 105);"
                           type="button"
@@ -529,7 +529,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r1h:"
+                        id="tooltip-:r1g:"
                         role="tooltip"
                       >
                         <span
@@ -563,7 +563,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r1l:"
+                          aria-labelledby="tooltip-:r1k:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(69, 137, 255);"
                           type="button"
@@ -574,7 +574,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r1l:"
+                        id="tooltip-:r1k:"
                         role="tooltip"
                       >
                         <span
@@ -594,7 +594,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r1p:"
+                          aria-labelledby="tooltip-:r1o:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(224, 224, 224);"
                           type="button"
@@ -605,7 +605,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r1p:"
+                        id="tooltip-:r1o:"
                         role="tooltip"
                       >
                         <span
@@ -625,7 +625,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r1t:"
+                          aria-labelledby="tooltip-:r1s:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(69, 137, 255);"
                           type="button"
@@ -636,7 +636,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r1t:"
+                        id="tooltip-:r1s:"
                         role="tooltip"
                       >
                         <span
@@ -670,7 +670,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r21:"
+                          aria-labelledby="tooltip-:r20:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(208, 226, 255);"
                           type="button"
@@ -681,7 +681,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r21:"
+                        id="tooltip-:r20:"
                         role="tooltip"
                       >
                         <span
@@ -701,7 +701,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r25:"
+                          aria-labelledby="tooltip-:r24:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(224, 224, 224);"
                           type="button"
@@ -712,7 +712,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r25:"
+                        id="tooltip-:r24:"
                         role="tooltip"
                       >
                         <span
@@ -732,7 +732,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r29:"
+                          aria-labelledby="tooltip-:r28:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(224, 224, 224);"
                           type="button"
@@ -743,7 +743,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r29:"
+                        id="tooltip-:r28:"
                         role="tooltip"
                       >
                         <span
@@ -777,7 +777,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r2d:"
+                          aria-labelledby="tooltip-:r2c:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(232, 218, 255);"
                           type="button"
@@ -788,7 +788,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r2d:"
+                        id="tooltip-:r2c:"
                         role="tooltip"
                       >
                         <span
@@ -808,7 +808,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r2h:"
+                          aria-labelledby="tooltip-:r2g:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(224, 224, 224);"
                           type="button"
@@ -819,7 +819,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r2h:"
+                        id="tooltip-:r2g:"
                         role="tooltip"
                       >
                         <span
@@ -839,7 +839,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                         class="cds--tooltip-trigger__wrapper"
                       >
                         <button
-                          aria-labelledby="tooltip-:r2l:"
+                          aria-labelledby="tooltip-:r2k:"
                           class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                           style="background-color: rgb(224, 224, 224);"
                           type="button"
@@ -850,7 +850,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       <span
                         aria-hidden="true"
                         class="cds--popover"
-                        id="tooltip-:r2l:"
+                        id="tooltip-:r2k:"
                         role="tooltip"
                       >
                         <span
@@ -902,12 +902,12 @@ exports[`StatusGroups should match sample snapshot 1`] = `
         >
           <button
             aria-activedescendant=""
-            aria-controls="downshift-:r2:-menu"
+            aria-controls="downshift-:r1:-menu"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="downshift-:r2:-label"
+            aria-labelledby="downshift-:r1:-label"
             class="cds--list-box__field"
-            id="downshift-:r2:-toggle-button"
+            id="downshift-:r1:-toggle-button"
             role="combobox"
             tabindex="0"
             title="All"
@@ -934,7 +934,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+                  d="M8 11 3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
                 />
                 <title>
                   Open menu
@@ -943,9 +943,9 @@ exports[`StatusGroups should match sample snapshot 1`] = `
             </div>
           </button>
           <ul
-            aria-labelledby="downshift-:r2:-label"
+            aria-labelledby="downshift-:r1:-label"
             class="cds--list-box__menu"
-            id="downshift-:r2:-menu"
+            id="downshift-:r1:-menu"
             role="listbox"
           />
         </div>
@@ -957,7 +957,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
           class="cds--accordion__item"
         >
           <button
-            aria-controls="accordion-item-:r3:"
+            aria-controls="accordion-item-:r2:"
             aria-expanded="false"
             class="cds--accordion__heading"
             type="button"
@@ -974,7 +974,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M11 8L6 13 5.3 12.3 9.6 8 5.3 3.7 6 3z"
+                d="M11 8 6 13 5.3 12.3 9.6 8 5.3 3.7 6 3z"
               />
             </svg>
             <div
@@ -1000,7 +1000,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r5:"
+                        aria-labelledby="tooltip-:r4:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 131, 137);"
                         type="button"
@@ -1011,7 +1011,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r5:"
+                      id="tooltip-:r4:"
                       role="tooltip"
                     >
                       <span
@@ -1031,7 +1031,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r9:"
+                        aria-labelledby="tooltip-:r8:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 183, 132);"
                         type="button"
@@ -1042,7 +1042,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r9:"
+                      id="tooltip-:r8:"
                       role="tooltip"
                     >
                       <span
@@ -1062,7 +1062,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:rd:"
+                        aria-labelledby="tooltip-:rc:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 131, 137);"
                         type="button"
@@ -1073,7 +1073,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:rd:"
+                      id="tooltip-:rc:"
                       role="tooltip"
                     >
                       <span
@@ -1095,7 +1095,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
           >
             <div
               class="cds--accordion__content"
-              id="accordion-item-:r3:"
+              id="accordion-item-:r2:"
             >
               <div
                 class="status-card"
@@ -1116,7 +1116,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:rh:"
+                        aria-labelledby="tooltip-:rg:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 131, 137);"
                         type="button"
@@ -1127,7 +1127,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:rh:"
+                      id="tooltip-:rg:"
                       role="tooltip"
                     >
                       <span
@@ -1147,7 +1147,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:rl:"
+                        aria-labelledby="tooltip-:rk:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(224, 224, 224);"
                         type="button"
@@ -1158,7 +1158,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:rl:"
+                      id="tooltip-:rk:"
                       role="tooltip"
                     >
                       <span
@@ -1178,7 +1178,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:rp:"
+                        aria-labelledby="tooltip-:ro:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 131, 137);"
                         type="button"
@@ -1189,7 +1189,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:rp:"
+                      id="tooltip-:ro:"
                       role="tooltip"
                     >
                       <span
@@ -1223,7 +1223,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:rt:"
+                        aria-labelledby="tooltip-:rs:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 183, 132);"
                         type="button"
@@ -1234,7 +1234,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:rt:"
+                      id="tooltip-:rs:"
                       role="tooltip"
                     >
                       <span
@@ -1254,7 +1254,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r11:"
+                        aria-labelledby="tooltip-:r10:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 183, 132);"
                         type="button"
@@ -1265,7 +1265,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r11:"
+                      id="tooltip-:r10:"
                       role="tooltip"
                     >
                       <span
@@ -1285,7 +1285,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r15:"
+                        aria-labelledby="tooltip-:r14:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(255, 183, 132);"
                         type="button"
@@ -1296,7 +1296,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r15:"
+                      id="tooltip-:r14:"
                       role="tooltip"
                     >
                       <span
@@ -1330,7 +1330,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r19:"
+                        aria-labelledby="tooltip-:r18:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(253, 220, 105);"
                         type="button"
@@ -1341,7 +1341,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r19:"
+                      id="tooltip-:r18:"
                       role="tooltip"
                     >
                       <span
@@ -1361,7 +1361,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r1d:"
+                        aria-labelledby="tooltip-:r1c:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(224, 224, 224);"
                         type="button"
@@ -1372,7 +1372,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r1d:"
+                      id="tooltip-:r1c:"
                       role="tooltip"
                     >
                       <span
@@ -1392,7 +1392,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r1h:"
+                        aria-labelledby="tooltip-:r1g:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(253, 220, 105);"
                         type="button"
@@ -1403,7 +1403,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r1h:"
+                      id="tooltip-:r1g:"
                       role="tooltip"
                     >
                       <span
@@ -1437,7 +1437,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r1l:"
+                        aria-labelledby="tooltip-:r1k:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(69, 137, 255);"
                         type="button"
@@ -1448,7 +1448,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r1l:"
+                      id="tooltip-:r1k:"
                       role="tooltip"
                     >
                       <span
@@ -1468,7 +1468,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r1p:"
+                        aria-labelledby="tooltip-:r1o:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(224, 224, 224);"
                         type="button"
@@ -1479,7 +1479,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r1p:"
+                      id="tooltip-:r1o:"
                       role="tooltip"
                     >
                       <span
@@ -1499,7 +1499,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r1t:"
+                        aria-labelledby="tooltip-:r1s:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(69, 137, 255);"
                         type="button"
@@ -1510,7 +1510,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r1t:"
+                      id="tooltip-:r1s:"
                       role="tooltip"
                     >
                       <span
@@ -1544,7 +1544,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r21:"
+                        aria-labelledby="tooltip-:r20:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(208, 226, 255);"
                         type="button"
@@ -1555,7 +1555,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r21:"
+                      id="tooltip-:r20:"
                       role="tooltip"
                     >
                       <span
@@ -1575,7 +1575,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r25:"
+                        aria-labelledby="tooltip-:r24:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(224, 224, 224);"
                         type="button"
@@ -1586,7 +1586,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r25:"
+                      id="tooltip-:r24:"
                       role="tooltip"
                     >
                       <span
@@ -1606,7 +1606,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r29:"
+                        aria-labelledby="tooltip-:r28:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(224, 224, 224);"
                         type="button"
@@ -1617,7 +1617,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r29:"
+                      id="tooltip-:r28:"
                       role="tooltip"
                     >
                       <span
@@ -1651,7 +1651,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r2d:"
+                        aria-labelledby="tooltip-:r2c:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(232, 218, 255);"
                         type="button"
@@ -1662,7 +1662,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r2d:"
+                      id="tooltip-:r2c:"
                       role="tooltip"
                     >
                       <span
@@ -1682,7 +1682,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r2h:"
+                        aria-labelledby="tooltip-:r2g:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(224, 224, 224);"
                         type="button"
@@ -1693,7 +1693,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r2h:"
+                      id="tooltip-:r2g:"
                       role="tooltip"
                     >
                       <span
@@ -1713,7 +1713,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                       class="cds--tooltip-trigger__wrapper"
                     >
                       <button
-                        aria-labelledby="tooltip-:r2l:"
+                        aria-labelledby="tooltip-:r2k:"
                         class="status-card__status cds--btn cds--btn--sm cds--layout--size-sm cds--btn--primary cds--btn--icon-only"
                         style="background-color: rgb(224, 224, 224);"
                         type="button"
@@ -1724,7 +1724,7 @@ exports[`StatusGroups should match sample snapshot 1`] = `
                     <span
                       aria-hidden="true"
                       class="cds--popover"
-                      id="tooltip-:r2l:"
+                      id="tooltip-:r2k:"
                       role="tooltip"
                     >
                       <span

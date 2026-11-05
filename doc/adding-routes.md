@@ -120,7 +120,21 @@ A simple example would be:
 }
 ```
 
-Note - it will soon be possible to provide additional state to components, such as selecting the Alert list filter/view. For any other requirements, please create an issue in the repository.
+### Alert & Incident List state
+It is possible to provide a `filtername` and `viewname` state property when using either of these panels, in order to pre-select a specific filter and/or view. You can provide it as follows:
+1. Create the filter/view in the main UI as normal
+2. Inside your routes file definition for the `alertViewer` or `incidentViewer`, add the following (alertViewer used for example here):
+```
+{
+  "path": "/demo-aiops-panel",
+  "title": "Full page alert viewer",
+  "aiopsPanel": "alertViewer",
+  "state": {
+    "filtername": "MyCustomFilter",
+    "viewname": "MyCustomView"
+  }
+}
+```
 
 ## Custom bundle panel
 This allows you to render a custom panel that you have created using the toolkit. All the predefined routes in the example config are custom panels.

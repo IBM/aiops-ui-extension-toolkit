@@ -13,7 +13,7 @@ For convenience, a [query hook](src/helpers/useQuery.ts) is provided that allows
 Routes define a browser path to your dashboard within Cloud Pak for AIOps. This includes how components are organized and whether they're exposed in the Cloud Pak for AIOps main menu. An [schema](config/schemas/routes.json) is provided, as well as an [example](config/routes.json) to get started.
 
 ## Examples
-Visit our [storybook](https://ibm.github.io/aiops-ui-extension-template) for examples based on real Netcool customers.
+Visit our [storybook](https://ibm.github.io/aiops-ui-extension-toolkit) for examples based on real Netcool customers.
 
 You can also install the examples into an actual Cloud Pak for AIOps cluster.
 For a guide on embedding a Grafana page, see the doc [here](doc/grafana-guide.md).

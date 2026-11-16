@@ -1,0 +1,547 @@
+//
+// © Copyright IBM Corp. 2026
+// SPDX-License-Identifier: Apache-2.0
+//
+
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+
+.operational-insights-dashboard {
+  background-color: $background;
+  box-sizing: border-box;
+  color: $text-primary;
+  display: flex;
+  flex-direction: column;
+  // Fill exactly the space under the 48px (3rem) app header. The grid below shares the leftover
+  // height between its rows; if the minimum row heights don't fit, the dashboard scrolls instead.
+  height: calc(100vh - 3rem);
+  overflow-y: auto;
+  padding: $spacing-03 $spacing-05 $spacing-04;
+  width: 100%;
+}
+
+.insights-header-bar {
+  align-items: center;
+  border-bottom: 1px solid $border-subtle-01;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-03 $spacing-05;
+  justify-content: space-between;
+  margin-bottom: $spacing-03;
+  padding-bottom: $spacing-02;
+
+  // Title and subtitle share a row (the subtitle wraps below the title on narrow screens)
+  .insights-header-text {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 $spacing-04;
+  }
+
+  .insights-header-title {
+    @include type-style('heading-04');
+    color: $text-primary;
+    margin: 0;
+  }
+
+  .insights-header-description {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+    margin: 0;
+  }
+
+  .insights-header-actions {
+    align-items: center;
+    display: flex;
+    gap: $spacing-03;
+
+    .insights-timeframe-select {
+      min-width: 180px;
+    }
+  }
+}
+
+.insights-error-banner {
+  margin-bottom: $spacing-05;
+}
+
+// Summary row: KPI tiles take half the width, alert handling the other half
+.insights-summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-04;
+  margin-bottom: $spacing-04;
+
+  .insights-kpi-banner,
+  .insights-handling-card {
+    flex: 1 1 calc(50% - #{$spacing-04});
+    min-width: 320px;
+  }
+}
+
+// Top KPI Banners
+.insights-kpi-banner {
+  display: grid;
+  gap: $spacing-03;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+
+  .insights-kpi-card {
+    background-color: $layer-01;
+    border: 1px solid $border-subtle-01;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 64px;
+    padding: $spacing-03;
+
+    &--highlight {
+      background-color: $layer-accent-01;
+      border-color: $interactive;
+    }
+
+    .insights-kpi-header-row {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-01;
+      justify-content: space-between;
+    }
+
+    .insights-kpi-label {
+      @include type-style('label-01');
+      color: $text-secondary;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .insights-kpi-value {
+      @include type-style('productive-heading-04');
+      color: $text-primary;
+      margin: $spacing-01 0 0;
+
+      &--highlight {
+        color: $support-success;
+        font-weight: 600;
+      }
+    }
+
+  }
+}
+
+// Alert handling (acknowledged / assigned / grouped)
+.insights-handling-card {
+  align-items: center;
+  background-color: $layer-01;
+  border: 1px solid $border-subtle-01;
+  display: grid;
+  gap: $spacing-03;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: $spacing-03 $spacing-04;
+
+  .insights-kpi-label {
+    @include type-style('label-01');
+    color: $text-secondary;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .insights-handling-values {
+    align-items: baseline;
+    display: flex;
+    gap: $spacing-03;
+    margin-top: $spacing-01;
+  }
+
+  .insights-handling-count {
+    @include type-style('productive-heading-04');
+    color: $text-primary;
+  }
+
+  .insights-handling-percent {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+  }
+}
+
+// Dashboard Grid Layout
+.insights-dashboard-grid {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: $spacing-04;
+
+  .insights-grid-row {
+    display: flex;
+    // Rows below the first share the remaining viewport height; min-height keeps them usable
+    // (the dashboard scrolls if even the minimums don't fit).
+    flex: 1 1 0;
+    flex-wrap: wrap;
+    gap: $spacing-04;
+    min-height: 150px;
+    width: 100%;
+
+    // First row (open incident age + top noise) is sized by its content
+    &:first-child {
+      flex: 0 0 auto;
+      min-height: 0;
+    }
+
+    // The chart row needs more room than the list row
+    &--chart {
+      flex-grow: 1.4;
+      min-height: 240px;
+    }
+
+    .insights-grid-col {
+      display: flex;
+      flex-direction: column;
+
+      &--half {
+        flex: 1 1 calc(50% - #{$spacing-04});
+        min-width: 320px;
+      }
+
+      &--full {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Common Panel Tile Styles
+.insights-panel-tile {
+  background-color: $layer-01;
+  border: 1px solid $border-subtle-01;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  padding: $spacing-03 $spacing-04;
+
+  .insights-panel-header {
+    align-items: flex-start;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    margin-bottom: $spacing-03;
+
+    .insights-panel-title-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .insights-panel-title {
+      @include type-style('heading-02');
+      color: $text-primary;
+      margin: 0;
+    }
+
+    .insights-panel-subtitle {
+      @include type-style('helper-text-01');
+      color: $text-secondary;
+      margin-top: $spacing-01;
+    }
+  }
+}
+
+// Open Incident Age
+.insights-open-age {
+  .insights-age-kpi-badge {
+    align-items: flex-end;
+    background-color: $layer-accent-01;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-02 $spacing-04;
+
+    .insights-badge-kpi-title {
+      @include type-style('label-01');
+      color: $text-secondary;
+    }
+
+    .insights-badge-kpi-val {
+      @include type-style('heading-03');
+      color: $text-primary;
+      font-weight: 600;
+    }
+  }
+
+  .insights-age-summary-grid {
+    background-color: $layer-02;
+    border-radius: 4px;
+    display: grid;
+    gap: $spacing-03;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: $spacing-03;
+    padding: $spacing-02 $spacing-03;
+
+    .insights-age-stat {
+      display: flex;
+      flex-direction: column;
+
+      .insights-stat-label {
+        @include type-style('helper-text-01');
+        color: $text-secondary;
+      }
+
+      .insights-stat-val {
+        @include type-style('heading-02');
+        color: $text-primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // One compact line per priority: label | bar | open count / average age
+  .insights-age-priority-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-02;
+  }
+
+  .insights-priority-header,
+  .insights-priority-row {
+    align-items: center;
+    display: grid;
+    gap: $spacing-03;
+    grid-template-columns: 8.5rem minmax(0, 1fr) 6rem;
+  }
+
+  .insights-priority-header {
+    @include type-style('label-01');
+    border-bottom: 1px solid $border-subtle-01;
+    color: $text-secondary;
+    padding-bottom: $spacing-02;
+
+    span:last-child {
+      text-align: right;
+    }
+  }
+
+  .insights-priority-tag {
+    @include type-style('body-short-01');
+    font-weight: 500;
+    padding-left: $spacing-02;
+    white-space: nowrap;
+  }
+
+  .insights-priority-duration {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+// Top Noise Contributors
+.insights-top-noise {
+  // The list takes whatever height the tile has (set by the neighbouring open-age tile) and
+  // scrolls internally. `contain: size` stops its content from growing the tile/page.
+  .insights-resource-list {
+    contain: size;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: $spacing-02;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .insights-resource-row {
+    align-items: center;
+    background-color: $layer-02;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    gap: $spacing-03;
+    padding: $spacing-02 $spacing-03;
+    transition: background-color 0.15s ease-in-out;
+
+    &:hover {
+      background-color: $layer-hover-02;
+    }
+
+    .insights-resource-rank {
+      @include type-style('label-01');
+      color: $text-secondary;
+      font-weight: 600;
+      width: 28px;
+    }
+
+    .insights-resource-info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      overflow: hidden;
+
+      .insights-resource-name {
+        @include type-style('body-short-01');
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .insights-resource-counts {
+        @include type-style('helper-text-01');
+        color: $text-secondary;
+      }
+    }
+  }
+}
+
+// New alerts & incidents: the chart fills whatever height the tile has
+.insights-timeline-tile {
+  .insights-chart-container {
+    flex: 1 1 0;
+    min-height: 0;
+    position: relative;
+
+    > * {
+      height: 100%;
+    }
+  }
+}
+
+// Top Incidents
+.insights-top-incidents {
+  .insights-incident-list {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: $spacing-02;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .insights-incident-row {
+    align-items: center;
+    background-color: $layer-02;
+    border-radius: 4px;
+    display: flex;
+    flex-shrink: 0;
+    gap: $spacing-03;
+    padding: $spacing-02 $spacing-03;
+  }
+
+  .insights-incident-priority {
+    @include type-style('label-01');
+    font-weight: 600;
+    padding-left: $spacing-02;
+    width: 36px;
+  }
+
+  .insights-incident-title {
+    @include type-style('body-short-01');
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .insights-incident-alerts {
+    @include type-style('helper-text-01');
+    color: $text-secondary;
+    white-space: nowrap;
+  }
+}
+
+// Correlation Breakdown
+.insights-correlation-tile {
+  .insights-correlation-list {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: $spacing-05;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .insights-correlation-meta {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacing-02;
+  }
+
+  .insights-correlation-label {
+    @include type-style('body-short-01');
+    font-weight: 600;
+  }
+
+  .insights-correlation-counts {
+    @include type-style('helper-text-01');
+    color: $text-secondary;
+  }
+
+  .insights-correlation-track {
+    background-color: $layer-02;
+    height: 8px;
+    width: 100%;
+  }
+
+  .insights-correlation-bar {
+    height: 100%;
+    min-width: 2px;
+
+    &--temporal {
+      background-color: #0f62fe;
+    }
+
+    &--topological {
+      background-color: #8a3ffc;
+    }
+
+    &--scope {
+      background-color: #0072c3;
+    }
+  }
+}
+
+.insights-empty-chart,
+.insights-empty-state {
+  @include type-style('body-short-01');
+  align-items: center;
+  color: $text-secondary;
+  display: flex;
+  font-style: italic;
+  height: 100%;
+  justify-content: center;
+  min-height: 80px;
+}
+
+// Narrow screens: panels stack, so stop sharing height and let the page scroll normally
+@media (max-width: 42rem) {
+  .operational-insights-dashboard {
+    height: auto;
+    min-height: calc(100vh - 3rem);
+  }
+
+  .insights-dashboard-grid {
+    .insights-grid-row,
+    .insights-grid-row--chart {
+      flex: 0 0 auto;
+      min-height: 0;
+    }
+
+    .insights-timeline-tile .insights-chart-container {
+      flex: 0 0 auto;
+      height: 260px;
+    }
+
+    .insights-top-incidents .insights-incident-list,
+    .insights-correlation-tile .insights-correlation-list {
+      flex: 0 0 auto;
+      max-height: 280px;
+    }
+  }
+
+  .insights-top-noise .insights-resource-list {
+    contain: none;
+    flex: 0 0 auto;
+    max-height: 280px;
+  }
+}

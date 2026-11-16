@@ -95,7 +95,9 @@ export const ALERT_QUERY_PARAMS = {
     'id',
     'signature',
     '@insights.type=\'aiops.ibm.com/insight-type/relationship/causal-union\'',
-    '@insights.type=\'aiops.ibm.com/insight-type/topology/group\''
+    '@insights.type=\'aiops.ibm.com/insight-type/topology/group\'',
+    // Appended last so existing column indexes used by other panels are unchanged
+    'eventCount'
   ],
   filter: 'state != \'clear\'',
   format: 'AIOPS'
@@ -248,6 +250,14 @@ export const DROPDOWN_ITEMS : {[key: string]: string} = {
   '15Min': 'Last 15 minutes',
   '24Hr': 'Last 24 hours'
 }
+
+export const INSIGHTS_TIMEFRAMES = [
+  { label: 'Last 1 hour', value: '1h', hours: 1 },
+  { label: 'Last 24 hours', value: '24h', hours: 24 },
+  { label: 'Last 7 days', value: '7d', hours: 24 * 7 },
+  { label: 'Last 30 days', value: '30d', hours: 24 * 30 },
+  { label: 'Last 90 days', value: '90d', hours: 24 * 90 },
+];
 
 export const ALL_SEVS_FIRST_OCC = 'AllSeverities_first';
 export const ALL_SEVS_LAST_OCC = 'AllSeverities_last';

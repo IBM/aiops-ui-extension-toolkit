@@ -4,6 +4,7 @@
       {
         "categoryTitle": "Example dashboards",
         "routes": [
+          "/operational-insights",
           "/alerts-top-10",
           "/alerts-workflow",
           "/alerts-timeline",
@@ -17,6 +18,12 @@
       }
     ],
     "routes": [
+      {
+        "path": "/operational-insights",
+        "title": "Operational Insights",
+        "bundlePath": "bundles/alerts-examples/files/alerts-examples-bundle.js",
+        "panelId": "operational-insights"
+      },
       {
         "path": "/alerts-workflow",
         "regions": {

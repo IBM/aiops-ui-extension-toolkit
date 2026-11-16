@@ -68,6 +68,13 @@ export const MonitorBoxes = {
   }
 };
 
+export const OperationalInsightsPanel = {
+  renderer: ReactRenderer,
+  state: {
+    component: () => import('./panels/operational-insights.panel')
+  }
+};
+
 window.registerCustomPanel('hello-world', SimpleSamplePanel);
 window.registerCustomPanel('alerts-workflow', AlertsWorkflowPanel);
 window.registerCustomPanel('top-n', TopNPanel);
@@ -76,3 +83,4 @@ window.registerCustomPanel('application-heatmap', ApplicationHeatmapPanel);
 window.registerCustomPanel('alerts-timeline', AlertsTimelinePanel);
 window.registerCustomPanel('incidents-pie-chart', IncidentsPieChart);
 window.registerCustomPanel('monitor-boxes', MonitorBoxes);
+window.registerCustomPanel('operational-insights', OperationalInsightsPanel);

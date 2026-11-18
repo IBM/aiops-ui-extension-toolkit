@@ -8,7 +8,6 @@ const {readFile} = require('fs/promises');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 
-const {loginWithApiKey} = require('cp4waiops-ui-bundle-tools');
 
 const targetData = fs.readFileSync('./target.json');
 const targetDataJSON = JSON.parse(targetData);
@@ -30,6 +29,7 @@ module.exports = async (env) => {
 
   let mconfig;
   if (env.WEBPACK_SERVE) {
+    const { loginWithApiKey } = await import('./lib/aiops-bundle-utils.mjs');
     mconfig = await loginWithApiKey(targetDataJSON.url, targetDataJSON.username, targetDataJSON.apiKey);
     console.log('Logged into cluster 📡');
   }

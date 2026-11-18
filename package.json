@@ -61,7 +61,7 @@
     "autoprefixer": "^10.4.13",
     "babel-jest": "^29.3.1",
     "babel-loader": "^9.1.0",
-    "cp4waiops-ui-bundle-tools": "^0.0.4",
+    "jszip": "^3.10.1",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.2",
     "eslint": "^9.19.0",

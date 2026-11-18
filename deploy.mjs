@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { AiopsBundleApiClient, UploadBundleTask, loginWithApiKey } from 'cp4waiops-ui-bundle-tools';
+import { AiopsBundleApiClient, UploadBundleTask, loginWithApiKey } from './lib/aiops-bundle-utils.mjs';
 import fs from 'fs/promises';
 import minimist from 'minimist';
 import { getClient, updateRoutesConfigMap, defaultNamespace } from './lib/aiops-k8s-utils.mjs';
